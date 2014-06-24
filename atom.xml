@@ -4,7 +4,7 @@
   <title><![CDATA[Blogs By Me]]></title>
   <link href="http://tworitdash.github.io/atom.xml" rel="self"/>
   <link href="http://tworitdash.github.io/"/>
-  <updated>2014-06-25T01:04:10+05:30</updated>
+  <updated>2014-06-25T01:10:03+05:30</updated>
   <id>http://tworitdash.github.io/</id>
   <author>
     <name><![CDATA[Tworit]]></name>
@@ -20,7 +20,7 @@
     <id>http://tworitdash.github.io/blog/2014/06/24/blogging-with-octopress-and-deploying-in-github</id>
     <content type="html"><![CDATA[<p>After a long and tiring hot day, finally it&rsquo;s raining here at Bhubaneswar. So let&rsquo;s hack some codes to make an awesome blogging site.</p>
 
-<p>Do you feel same as I feel about wordpress. If yes, then just get rid of it and use one of the best static page or blogging page generators called Octopress.And github provides an awesome online page generating option so that the codes can be pushed or deployed in github to share it on the web. :)</p>
+<p>Do you feel same as I feel about wordpress? If yes, then just get rid of it and use one of the best static page or blogging page generators called Octopress.And github provides an awesome online page generating option so that the codes can be pushed or deployed in github to share it on the web. :)</p>
 
 <p>Steps:
 Install ruby in your system (as octopress is based on ruby)</p>
