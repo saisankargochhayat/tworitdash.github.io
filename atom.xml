@@ -4,7 +4,7 @@
   <title><![CDATA[Blogs By Me]]></title>
   <link href="http://tworitdash.github.io/atom.xml" rel="self"/>
   <link href="http://tworitdash.github.io/"/>
-  <updated>2014-06-26T01:17:54+05:30</updated>
+  <updated>2014-06-26T01:20:56+05:30</updated>
   <id>http://tworitdash.github.io/</id>
   <author>
     <name><![CDATA[Tworit]]></name>
@@ -144,7 +144,7 @@
 
 <p>Then just open that index file and do whatever you want to customize it.</p>
 
-<p>And most importantly don&rsquo;t write the link for the home page as just <code></code> in the navigation file and do write it as <code>/</code>, otherwise the link will point to the same page which is being opened up in the browser.</p>
+<p>And most importantly don&rsquo;t write the link for the home page as just <code>{{ root_url }} </code> in the navigation file and do write it as <code>{{ root_url }}/</code>, otherwise the link will point to the same page which is being opened up in the browser.</p>
 
 <p>All is set now and just run the commands:</p>
 
