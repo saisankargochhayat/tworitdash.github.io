@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blogs By Me</title>
+  <title>Customizing Octopress Pages - Blogs By Me</title>
   <meta name="author" content="Tworit">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tworitdash.github.io/blog">
+  <link rel="canonical" href="http://tworitdash.github.io/blog/2014/06/25/customizing-octopress-pages">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Blogs By Me" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/06/25/customizing-octopress-pages/">Customizing Octopress Pages</a></h1>
+      <h1 class="entry-title">Customizing Octopress Pages</h1>
     
     
       <p class="meta">
@@ -89,15 +86,15 @@
 
 <time datetime="2014-06-25T22:42:43+05:30" pubdate data-updated="true">Jun 25<span>th</span>, 2014</time>
         
-           | <a href="/blog/2014/06/25/customizing-octopress-pages/#disqus_thread"
-             data-disqus-identifier="http://tworitdash.github.io/blog/2014/06/25/customizing-octopress-pages/">Comments</a>
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://tworitdash.github.io">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>After creating a simple blogging site, let&rsquo;s now create some custom pages for our site like about and home pages.</p>
+<div class="entry-content"><p>After creating a simple blogging site, let&rsquo;s now create some custom pages for our site like about and home pages.</p>
 
 <p>Before that if you want to publish the blog page in your_url.com/blog instead of your_url.com and you just want your own index page at your_url.com, then just open up the Rakefile and edit the <code>blog_index_dir</code> to :</p>
 
@@ -236,212 +233,16 @@
 
 <p>Open up your_url.com or your_url.github.io and have fun. :) :)</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/24/blogging-with-octopress-and-deploying-in-github/">Blogging With Octopress and Deploying in Github</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Tworit</span></span>
 
-<time datetime="2014-06-24T22:58:00+05:30" pubdate data-updated="true">Jun 24<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/06/24/blogging-with-octopress-and-deploying-in-github/#disqus_thread"
-             data-disqus-identifier="http://tworitdash.github.io/blog/2014/06/24/blogging-with-octopress-and-deploying-in-github/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After a long and tiring hot day, finally it&rsquo;s raining here at Bhubaneswar. So let&rsquo;s hack some codes to make an awesome blogging site.</p>
-
-<p>Do you feel the same as I feel about wordpress? If yes, then just get rid of it and use one of the best static page or blogging page generators called Octopress.And github provides an awesome online page generating option so that the codes can be pushed or deployed in github to share it on the web. :)</p>
-
-<p>Steps:
-Install ruby in your system (as octopress is based on ruby)</p>
-
-<p><a href="http://www.tutorialspoint.com/ruby/ruby_installation_windows.htm">For windows</a></p>
-
-<p><a href="http://www.sdjournal.com/posts/ruby-with-rbenv-on-debian.html">For ubtntu/debian</a></p>
-
-<p>Using rbenv for ruby version and gem management is better in debian based operarting systems.</p>
-
-<p>For mac users, there is no need to install ruby perhaps as they have it pre-installed.</p>
-
-<p>Check by running either of the following.</p>
-
-<pre><code>1. ruby -v
-2. ruby --version
-</code></pre>
-
-<p>Now we are ready to go for the hack.Let&rsquo;s make a folder and clone the octopress github repo in that.You will need the <a href="http://git-scm.com/download/win">git command line or the git bash</a> for that in windows and for ubuntu or debian just <code>sudo apt-get install git</code> will do that same job.</p>
-
-<pre><code>1. mkdir your_repo
-2. cd your_repo
-3. git clone git://github.com/imathis/octopress.git octopress
-4. cd octopress
-</code></pre>
-
-<p>Now we are in the octopress directory and now we need to install all the ruby gems to perform our task. So we first need the bundler gem.</p>
-
-<pre><code>1. gem install bundler
-</code></pre>
-
-<p>Not <code>sudo gem install bundler</code> as we are using rbenv for ruby.</p>
-
-<p>Then while in that directory run</p>
-
-<pre><code>1. bundle install
-2. bundle exec rake install
-</code></pre>
-
-<p>The rake install command follows the rake task (install) and creates a group of files and folders in that octopress directory like <code>source</code> <code>public</code> etc and if you look into the source folder you can find the folder <code>_posts</code>(where all the blog markdown files are going to be saved).</p>
-
-<p>Then for the basic configurations, open up the _config.yml file and set the things in that like ;</p>
-
-<pre><code>1. url: http://yoursite.com
-2. title: My First Dummy Blog
-3. subtitle: 
-4. author: Me 
-5. simple_search: https://www.google.com/search
-6. description: whatever !
-</code></pre>
-
-<p>All set !!! :)</p>
-
-<p>Then let&rsquo;s create the first blog</p>
-
-<pre><code>1. bundle exec rake new_post["your blog title"]
-</code></pre>
-
-<p>This rake task will create a markdown file in the <code>_posts</code> folder with the current date (/blog/year-month-date-title) as we see in general blogging sites.Open that file and you can see the page layout is &ldquo;post&rdquo; and I will explain how to make our own custom ones in my following blogs.</p>
-
-<pre><code>---
-1.  layout: post
-2.  title: "Blogging with Octopress and deploying in Github"
-3.  date: 2014-06-24 22:58:00 +0530
-4.  comments: false
-5.  categories:
-----
-</code></pre>
-
-<p>Then insert your blog right below the &ndash; &ndash; &ndash; and save the file.</p>
-
-<p>After that we can see the changes by running</p>
-
-<pre><code>1. bundle exec rake generate
-2. bundle exec rake preview
-</code></pre>
-
-<p>The preview task will create the page at port 4000 and to have a overview we can see it at <code>localhost:4000</code> in any browser.</p>
-
-<p>Then stop that browser by running <code>ctrl+c</code> and we are done.</p>
-
-<p><h2> Deploying in Github </h2></p>
-
-
-<p>First we need to make a github account and make it verified through the email address(this has to be done to make github free pages live on the web).</p>
-
-<p>Then we have to create a repo named <code>[username.github.io]</code></p>
-
-<p>Then we have to run the following in CLI or Terminal.</p>
-
-<pre><code>1. bundle exec rake setup_github_pages
-</code></pre>
-
-<p>It will ask for the github repo link and we have to write the url for that github repo.</p>
-
-<p>Then just deploy the codes.</p>
-
-<pre><code>1. bundle exec rake deploy
-</code></pre>
-
-<p>In this task the static pages that are generated in the <code>rake generate </code> command will be copied from the <code>public</code> folder to the <code>_deploy</code> folder and at the same time the codes will be pushed to the master branch of that github repo. It will ask your github user and password and after that it will be all done. Then refresh that repo and all the codes will be there. \o/</p>
-
-<p>Then wait for 15 minutes and then open <code>username.github.io</code> and you will have your blog on the web.</p>
-
-<p>Still not satisfied ?? Want to get rid of the <code>github.io</code> from your url?? Do you have your custom domain ?? If the answers to all of the above questions are yes,yes and yes then follow the steps below.</p>
-
-<p><h2> Custom Domain </p>
-
-
-<p></h2></p>
-
-<p>Adding a CNAME file in the source directory will do the job.
-.</p>
-
-<pre><code>1. touch CNAME
-</code></pre>
-
-<p>Then open that file in any editor and add the url of your site.</p>
-
-<pre><code>1. your_url.com
-</code></pre>
-
-<p>Then generate and deploy the codes and wait for 10 minutes. Then go to the github repo&rsquo;s right hand settings bar and scroll down a bit and you will be able to see in the github pages table the url of your site. [Your site is published at your_url.com]</p>
-
-<p>Then go to your service provider or domain provider link and create a new A record in the &ldquo;DNS manage&rdquo; and come back to your CLI or Terminal and run the following.</p>
-
-<pre><code>1. dig username.github.io +nostats +nocomments +nocmd
-</code></pre>
-
-<p>Then it will show up something like this.</p>
-
-<pre><code>1. github.map.fastly.net.   17  IN  A   your_address
-2. fastly.net.      *****   IN  NS  ns1.***.dynect.net.
-3. fastly.net.      *****   IN  NS  ns2.***.dynect.net.
-4. fastly.net.      *****   IN  NS  ns3.***.dynect.net.
-4. fastly.net.      *****   IN  NS  ns4.***.dynect.net.
-</code></pre>
-
-<p>After that copy that <code>your_address</code> to the A record in that domain provider.</p>
-
-<p>It&rsquo;s better if you create 2 records and name them as (your_url.com) and (www.your_url.com) and copy that address in both the records.</p>
-
-<p>Then wait for about 15 minutes and then all done.</p>
-
-<p>Your blog is now updated at your_url.com. \o/</p>
-
-<p>Next I will show how to make custom pages using Octopress.</p>
-
-<p>Sorry for the comment bar because I don&rsquo;t have that active now. Will fix that later on. :)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/22/how-i-met-c-dot-s-lewis/">How I Met C.S.Lewis</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -453,32 +254,38 @@ Install ruby in your system (as octopress is based on ruby)</p>
   
 
 
-<time datetime="2014-06-22T15:20:10+05:30" pubdate data-updated="true">Jun 22<span>nd</span>, 2014</time>
-        
-           | <a href="/blog/2014/06/22/how-i-met-c-dot-s-lewis/#disqus_thread"
-             data-disqus-identifier="http://tworitdash.github.io/blog/2014/06/22/how-i-met-c-dot-s-lewis/">Comments</a>
-        
-      </p>
+<time datetime="2014-06-25T22:42:43+05:30" pubdate data-updated="true">Jun 25<span>th</span>, 2014</time>
+      
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>After watching the three chronicles of Narnia, I was curiously driven to know more about the writer C.S. Lewis. If I knew about the series before, I would have read the books much earlier than the release date of the first movie. I was a bit late to start, but it turned out to be more interesting than expected. I am a kind of person who take interest in some things which are not so mainstream and not adorable. As far as childrens&#8217; fantasy is concerned, I believe in &lsquo;em to some extent. But to think of a pretty different world in a different universe, (with a complete set of new physical laws and or you can say a complete set of new Gods of creation) has grown an immense inquisitiveness within me and for that very reason I found the Narnian series to be the best fit for my childish ( if you can say it ) imaginations. Is our world round or we just imagine it to be? Whatever that is, I found a world which is triangular flat in my dreams and happened to notice that Narnia is also flat.</p>
-
-<p>And who knows the shape of the world we live in? (&hellip; Bermuda Triangle is still a mystery &hellip;) Things, which are untrue and apocryphal (or we just think they are) often trouble us about their existance, because those are somehow parts of our possible imaginations. The thing that I am trying to convey is nothing is apocryphal as long as they are parts of our imaginations. From physicsist&rsquo;s point of view, if I consider, I can say those things or happenings belong to other parallel universes. But the thing that I had to focus on was “How to make a contact(physical, mental, over internet if you are ignorant of the keyword “parallel universes”) among those parallel universes ?” I think (genuinely) that I certainly found out the answer and I believe C.S. Lewis had got it much before me .!! :)</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tworitdash.github.io/blog/2014/06/25/customizing-octopress-pages/" data-via="tworitdash" data-counturl="http://tworitdash.github.io/blog/2014/06/25/customizing-octopress-pages/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/24/blogging-with-octopress-and-deploying-in-github/" title="Previous Post: Blogging with Octopress and deploying in Github">&laquo; Blogging with Octopress and deploying in Github</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -503,7 +310,7 @@ Install ruby in your system (as octopress is based on ruby)</p>
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <script type="text/javascript">
@@ -542,6 +349,7 @@ Install ruby in your system (as octopress is based on ruby)</p>
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -556,7 +364,10 @@ Install ruby in your system (as octopress is based on ruby)</p>
       var disqus_shortname = 'tworitdash.in';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tworitdash.github.io/blog/2014/06/25/customizing-octopress-pages/';
+        var disqus_url = 'http://tworitdash.github.io/blog/2014/06/25/customizing-octopress-pages/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
