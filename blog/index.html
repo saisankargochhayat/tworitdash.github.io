@@ -9,7 +9,7 @@
   <meta name="author" content="Tworit">
 
   
-  <meta name="description" content="After creating a simple blogging site, let&rsquo;s now create some custom pages for our site like about and home pages. Before that if you want to &hellip;">
+  <meta name="description" content="The name is inspired from Real Steel. This is just a prototype made using ruby libraries, arduino microcontroller board and raspberry pi. The idea is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,89 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/06/28/our-atom-bot/">Our Atom Bot</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-28T00:41:44+05:30" pubdate data-updated="true">Jun 28<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/06/28/our-atom-bot/#disqus_thread"
+             data-disqus-identifier="http://tworitdash.github.io/blog/2014/06/28/our-atom-bot/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The name is inspired from <a href="http://realsteel.wikia.com/wiki/Atom">Real Steel</a>. This is just a prototype made using ruby libraries, <a href="http://www.arduino.cc/">arduino microcontroller</a> board and <a href="http://www.raspberrypi.org/">raspberry pi</a>. The idea is to control a system or hardware from anywhere around the globe by the help of internet. What are actually the ruby libraries and how it helps?</p>
+
+<p>The answer lies within the library files. The gems that are used to make the server-client communication are <a href="https://rubygems.org/gems/eventmachine">eventmachine</a> and <a href="https://rubygems.org/gems/em-websocket">em-websocket(&ldquo;eventmachine-websocket&rdquo;)</a>. Websocket, as the name signifies, is a power source, which is web-based. The server side code for the app (web-page) is written in ruby with the help of eventmachine websocket. When the app runs in a terminal, the client or the web page can be connected to it by opening that port in any browser. Or if that is already deployed in any website which supports em-websocket, the port can be conneted through a client code written in ruby with the help of em-websocket. The client can be connected even while using the localhost. How does browser know which port is for the websocket and how to connect it or how does the client code know the same? In the html code for that web-page a script is written which opens the websocket at the same port as written in the server side ruby app code. And in the client ruby code it is also mentioned where to open that websocket port.</p>
+
+<h2>PING PONG</h2>
+
+<p>The ping-pong is the concept of receiving and sending messages between server and client. The message can be recieved or sent over the websocket. So, we can connect various buttons on that static html page and send commands over the web-socket when the switches are pressed(As we do in normal electric switches over electrical network). And those commands or messages can be received from the client ruby code. And we can also do the reverse. Why to send commands over buttons and receive through a client code?</p>
+
+<h2>SerialPort</h2>
+
+<p>Here comes another ruby gem called the <a href="https://rubygems.org/gems/serialport">serialport</a>. This gem is built to use RS-232 serialports. With the help of this gem we can send commands serially through a serialport(where the hardware or the arduino is connected). We can merge the code for serialport within that same client code for the websocket server. In this way we can send that very command (which is being sent from that web-page or browser via web-socket) to the serialport. But why to send commands to the serialport?</p>
+
+<h2>Arduino</h2>
+
+<p><a href="http://www.arduino.cc/">Arduino</a> is a microcontroller board which has UART (universal asynchronous receiver and transmitter). This UART helps that board to receive the commands coming to it over the serialport. After getting the command(the command I am referring here is a character constant like &lsquo;a&rsquo;), it can process the output accordingly. How can it know what to perform while that exact command is received? It can all be written in the Arduino IDE and  uploaded to that board to do the required tasks. Isn&rsquo;t that awesome? Arduino has IO ports and with the help of those anything at the output can be connected.</p>
+
+<h2>RaspberryPi</h2>
+
+<p><a href="http://www.raspberrypi.org/">RaspberryPi</a> is a credit-card sized computer (linux based) which can be easily connected to the arduino through its serialport(USB) and it can be connected to the internet over wifi. This can be the device in which the client code can be executed. :) :)</p>
+
+<h2>A Prototype</h2>
+
+<p>We have made a prototype using the above libraries and the set of hardwares. We have connected the raspberrypi to internet through ssh (as we don&rsquo;t have a separate monitor for that) and connected the arduino with the pi through its serialport. And to the output of arduino, we have connected two motors (the motors are connected to two wheels) with a motor driver circuit. The app now can be executed in any laptop and hence the port can be active so that the websocket port can be opened up by using any browser connected to that internet network or wifi. Then by the above process we can just hit the buttons and see the robot-car moving. And an additional feature that we have included in the script of that html code is the accelerometer. That means any device having the accelerometer feature can run that robot like a game (just moving it sideways). :) Hence the name of our robot-car. And if the websocket server is running on the web, we can control it from anywhere around the globe. The video of our robot-car:</p>
+
+<iframe src="//player.vimeo.com/video/98682460" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<p> <p><a href="http://vimeo.com/98682460">MOV_0089.mp4</a> from <a href="http://vimeo.com/user29276136">Tworit</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<p><img src="/images/atom.jpg"></p>
+
+<p>The source-code :</p>
+
+<p><a href="https://github.com/sunu/atom-bot">atom-bot</a></p>
+
+<h2>Utility</h2>
+
+<p>This system can help us in many ways like</p>
+
+<pre><code>1. We can automate our home like we can turn on our oven just before reaching home or we can check if the door is locked or not.
+2. Security notifications can be sent as a app notification over the internet.
+3. Can be used in hospitals and in traffic systems
+</code></pre>
+
+<p>And a lot of things can be developed with this. :)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -484,6 +567,10 @@ Install ruby in your system (as octopress is based on ruby)</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/06/28/our-atom-bot/">Our Atom Bot</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/06/25/customizing-octopress-pages/">Customizing Octopress Pages</a>
