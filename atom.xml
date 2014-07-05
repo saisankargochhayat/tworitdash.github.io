@@ -4,7 +4,7 @@
   <title><![CDATA[Blogs By Me]]></title>
   <link href="http://tworitdash.github.io/atom.xml" rel="self"/>
   <link href="http://tworitdash.github.io/"/>
-  <updated>2014-06-29T17:53:57+05:30</updated>
+  <updated>2014-07-05T21:08:30+05:30</updated>
   <id>http://tworitdash.github.io/</id>
   <author>
     <name><![CDATA[Tworit]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Colour and Font Customizing]]></title>
+    <link href="http://tworitdash.github.io/blog/2014/07/05/colour-and-font-customizing/"/>
+    <updated>2014-07-05T20:44:36+05:30</updated>
+    <id>http://tworitdash.github.io/blog/2014/07/05/colour-and-font-customizing</id>
+    <content type="html"><![CDATA[<p>I have now changed my colour scheme and font by editing (by removing some comment lines) in <code>sass/custom/<em>styles.scss</code> , <code>sass/custom/</em>colors.scss </code> and <code>sass/custom/_fonts.scss</code>.</p>
+
+<p>I referred to <a href="http://hslpicker.com/">this url</a> to pick suitable colors for my page and <a href="http://octopress.org/docs/theme/styles/">this blog</a> to get a good idea about how to change color scheme and style.</p>
+
+<p>My color scheme has been changed and I am loving it. :) :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Our Atom Bot]]></title>
