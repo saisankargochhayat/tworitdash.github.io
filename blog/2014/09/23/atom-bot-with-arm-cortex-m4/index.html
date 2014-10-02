@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Colour and Font Customizing - Blogs By Me</title>
+  <title>Atom Bot With ARM Cortex M4 - Blogs By Me</title>
   <meta name="author" content="Tworit">
 
   
-  <meta name="description" content="I have now changed my colour scheme and font by editing (by removing some comment lines) in sass/custom/styles.scss , sass/custom/colors.scss and &hellip;">
+  <meta name="description" content="This is a new version of my atom-bot and I have used an ARM Cortex M4 (tm4c123g) microcontroller board. The microcontroller has a clock speed of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tworitdash.github.io/blog/2014/07/05/colour-and-font-customizing">
+  <link rel="canonical" href="http://tworitdash.github.io/blog/2014/09/23/atom-bot-with-arm-cortex-m4">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Blogs By Me" type="application/atom+xml">
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">Colour and Font Customizing</h1>
+      <h1 class="entry-title">Atom Bot With ARM Cortex M4</h1>
     
     
       <p class="meta">
@@ -84,7 +84,7 @@
   
 
 
-<time datetime="2014-07-05T20:44:36+05:30" pubdate data-updated="true">Jul 5<span>th</span>, 2014</time>
+<time datetime="2014-09-23T16:39:19+05:30" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://tworitdash.github.io">Comments</a>
@@ -94,11 +94,25 @@
   </header>
 
 
-<div class="entry-content"><p>I have now changed my colour scheme and font by editing (by removing some comment lines) in <code>sass/custom/<em>styles.scss</code> , <code>sass/custom/</em>colors.scss </code> and <code>sass/custom/_fonts.scss</code>.</p>
+<div class="entry-content"><p>This is a new version of my atom-bot and I have used an ARM Cortex M4 (tm4c123g) microcontroller board.</p>
 
-<p>I referred to <a href="http://hslpicker.com/">this url</a> to pick suitable colors for my page and <a href="http://octopress.org/docs/theme/styles/">this blog</a> to get a good idea about how to change color scheme and style.</p>
+<p>The microcontroller has a clock speed of 80Mhz and it is a bit difficult to write code for it(as far as Arduino is concerned).</p>
 
-<p>My color scheme has been changed and I am loving it. :) :)</p>
+<p>It is <a href="http://edx.org/">edx</a>, from which I learned how to use a texas ARM board. During the course, I got a sample code for the UART functions (universal asynchronous receiver and transmitter). And I modified it a bit for the tasks of my atom-bot.</p>
+
+<p>The difficulty was with the OS. I love to work on linux, but to burn a program to the ARM, one has to use windows. So whenever I needed a modification in the microcontroller task, I had to switch on to windows :( . And my windows system is damn slow. Believe me, after using it for 2 or 3 days, you will probably prefer to die instead.</p>
+
+<p>After burning the program to the microcontroller, it was easy for me to send serial commands from the raspberry pi. :) :) (Now everything can be done from any OS). And for obviuos reasons I used ubuntu for making a ssh connection to the raspberry pi and pi does its work from raspbian(debian for raspberry).</p>
+
+<p>For obvious reasons :P !!! because I don&rsquo;t have a mac. :(</p>
+
+<p>As mentioned in my first atom-bot blog, the ruby machine client is in the raspberry pi. And this machine client connects to the server and draws the commands that the browser client sends through websockets.</p>
+
+<p>The codes are here</p>
+
+<p><a href="http://github.com/tworitdash/atom-bot-with-arm-cortex/">atom-bot-with-arm-cortex</a></p>
+
+<p><a href="http://keil.com/">Keil</a> is the IDE for the TIVA tm4c123g microcontroller. :)  :)</p>
 </div>
 
 
@@ -121,7 +135,7 @@
   
 
 
-<time datetime="2014-07-05T20:44:36+05:30" pubdate data-updated="true">Jul 5<span>th</span>, 2014</time>
+<time datetime="2014-09-23T16:39:19+05:30" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
       
 
 
@@ -129,7 +143,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tworitdash.github.io/blog/2014/07/05/colour-and-font-customizing/" data-via="tworitdash" data-counturl="http://tworitdash.github.io/blog/2014/07/05/colour-and-font-customizing/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tworitdash.github.io/blog/2014/09/23/atom-bot-with-arm-cortex-m4/" data-via="tworitdash" data-counturl="http://tworitdash.github.io/blog/2014/09/23/atom-bot-with-arm-cortex-m4/" >Tweet</a>
   
   
   
@@ -138,10 +152,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/06/28/our-atom-bot/" title="Previous Post: Our Atom Bot">&laquo; Our Atom Bot</a>
+        <a class="basic-alignment left" href="/blog/2014/07/05/colour-and-font-customizing/" title="Previous Post: Colour and Font Customizing">&laquo; Colour and Font Customizing</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/09/23/atom-bot-with-arm-cortex-m4/" title="Next Post: Atom Bot With ARM Cortex M4">Atom Bot With ARM Cortex M4 &raquo;</a>
       
     </p>
   </footer>
@@ -242,8 +254,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://tworitdash.github.io/blog/2014/07/05/colour-and-font-customizing/';
-        var disqus_url = 'http://tworitdash.github.io/blog/2014/07/05/colour-and-font-customizing/';
+        var disqus_identifier = 'http://tworitdash.github.io/blog/2014/09/23/atom-bot-with-arm-cortex-m4/';
+        var disqus_url = 'http://tworitdash.github.io/blog/2014/09/23/atom-bot-with-arm-cortex-m4/';
         var disqus_script = 'embed.js';
       
     (function () {

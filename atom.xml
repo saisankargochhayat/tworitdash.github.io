@@ -4,7 +4,7 @@
   <title><![CDATA[Blogs By Me]]></title>
   <link href="http://tworitdash.github.io/atom.xml" rel="self"/>
   <link href="http://tworitdash.github.io/"/>
-  <updated>2014-07-16T21:00:36+05:30</updated>
+  <updated>2014-10-02T16:12:21+05:30</updated>
   <id>http://tworitdash.github.io/</id>
   <author>
     <name><![CDATA[Tworit]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Atom Bot With ARM Cortex M4]]></title>
+    <link href="http://tworitdash.github.io/blog/2014/09/23/atom-bot-with-arm-cortex-m4/"/>
+    <updated>2014-09-23T16:39:19+05:30</updated>
+    <id>http://tworitdash.github.io/blog/2014/09/23/atom-bot-with-arm-cortex-m4</id>
+    <content type="html"><![CDATA[<p>This is a new version of my atom-bot and I have used an ARM Cortex M4 (tm4c123g) microcontroller board.</p>
+
+<p>The microcontroller has a clock speed of 80Mhz and it is a bit difficult to write code for it(as far as Arduino is concerned).</p>
+
+<p>It is <a href="http://edx.org/">edx</a>, from which I learned how to use a texas ARM board. During the course, I got a sample code for the UART functions (universal asynchronous receiver and transmitter). And I modified it a bit for the tasks of my atom-bot.</p>
+
+<p>The difficulty was with the OS. I love to work on linux, but to burn a program to the ARM, one has to use windows. So whenever I needed a modification in the microcontroller task, I had to switch on to windows :( . And my windows system is damn slow. Believe me, after using it for 2 or 3 days, you will probably prefer to die instead.</p>
+
+<p>After burning the program to the microcontroller, it was easy for me to send serial commands from the raspberry pi. :) :) (Now everything can be done from any OS). And for obviuos reasons I used ubuntu for making a ssh connection to the raspberry pi and pi does its work from raspbian(debian for raspberry).</p>
+
+<p>For obvious reasons :P !!! because I don&rsquo;t have a mac. :(</p>
+
+<p>As mentioned in my first atom-bot blog, the ruby machine client is in the raspberry pi. And this machine client connects to the server and draws the commands that the browser client sends through websockets.</p>
+
+<p>The codes are here</p>
+
+<p><a href="http://github.com/tworitdash/atom-bot-with-arm-cortex/">atom-bot-with-arm-cortex</a></p>
+
+<p><a href="http://keil.com/">Keil</a> is the IDE for the TIVA tm4c123g microcontroller. :)  :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Colour and Font Customizing]]></title>
